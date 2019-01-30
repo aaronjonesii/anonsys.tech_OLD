@@ -8,7 +8,7 @@ import {catchError} from "rxjs/operators";
   providedIn: 'root'
 })
 export class BlogService {
-  postsURL = 'https://api.anonsys.tech:8000/posts/'
+  postsURL = 'https://api.anonsys.tech/posts/'
   // postsURL = 'http://localhost:8000/posts/'
   httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
 
