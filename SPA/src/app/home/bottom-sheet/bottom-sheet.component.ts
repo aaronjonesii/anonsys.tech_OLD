@@ -20,7 +20,7 @@ export class BottomSheetComponent implements OnInit {
       link: 'admin', icon: 'browser-outline'},
     { title: 'Apple Music Player', desc: 'Browse Apple Music Top Charts or play music from your account.',
       link: 'music', icon: 'music-outline' },
-    { title: 'Blog', desc: 'Posts for to track and note daily activities.',
+    { title: 'Blog', desc: 'Posts including knowledge of the broad topic of Technology.',
       link: 'blog', icon: 'list-outline' },
     { title: 'IP Lookup', desc: 'Enter IP Address to get location information.',
       link: 'ip', icon: 'globe-outline' },

@@ -8,6 +8,7 @@ import { MusicComponent } from './music/music.component';
 import { MoviesComponent } from './movies/movies.component';
 import { TodoComponent } from './todo/todo.component';
 import { PostComponent } from './blog/post/post.component';
+import { NewPostComponent } from './blog/new-post/new-post.component';
 
 
 export const routes: Routes = [
@@ -18,6 +19,7 @@ export const routes: Routes = [
   },
   { path: 'admin', component: AdminComponent, },
   { path: 'blog', component: BlogComponent, },
+  { path: 'blog/newpost', component: NewPostComponent, },
   { path: 'blog/:post_id', component: PostComponent, },
   { path: 'ip', component: IpComponent, },
   { path: 'music', component: MusicComponent, },

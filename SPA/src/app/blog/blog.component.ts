@@ -1,8 +1,10 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
 import { map, switchMap, startWith } from 'rxjs/operators';
 import { BlogService } from './blog.service';
 import {interval, Observable} from 'rxjs';
 import { Posts } from './posts';
+import { NbDialogService } from '@nebular/theme';
+import {NewPostComponent} from "./new-post/new-post.component";
 
 declare var eva: any;
 
@@ -10,15 +12,20 @@ declare var eva: any;
   selector: 'anon-blog',
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss']
+  // encapsulation: ViewEncapsulation.ShadowDom
 })
 export class BlogComponent implements OnInit {
   count: 0;
   posts = [{title: 'Loading Blog Posts...'}];
-  posts$: Observable<any>;w
+  posts$: Observable<any>;
   next_page: string;
   prev_page: string;
+  blur_content = false;
 
-  constructor( private blog_api: BlogService ) {
+  constructor(
+      private blog_api: BlogService,
+      private dialogService: NbDialogService,
+  ) {
   }
 // https://www.apple.com/newsroom/
 //
@@ -51,6 +58,18 @@ export class BlogComponent implements OnInit {
      return index;
   }
 
+
+  newPost() {
+    // TODO: Blur Background on open
+    this.blur_content = true;
+    this.dialogService.open(NewPostComponent, {
+      context: {
+        title: 'Create New Blog Post:',
+      },
+      closeOnBackdropClick: false,
+      closeOnEsc: false,
+    }).onClose.subscribe(() => this.blur_content = false);
+  }
 
 
 }

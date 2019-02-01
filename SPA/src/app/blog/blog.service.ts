@@ -25,7 +25,7 @@ export class BlogService {
   }
 
   createPost(post): Observable<Post> {
-    return this.http.post<Post>(this.postsURL + '/', post, {headers: this.httpHeaders});
+    return this.http.post<Post>(this.postsURL , post);
   }
 
   updatePost(postID, post): Observable<Post> {

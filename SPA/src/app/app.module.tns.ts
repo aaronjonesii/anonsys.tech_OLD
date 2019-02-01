@@ -17,6 +17,10 @@ import { ItemComponent } from './todo/item/item.component';
 import { ListComponent } from './todo/list/list.component';
 import { EditorComponent } from './blog/editor/editor.component';
 import { LoadingComponent } from './loading/loading.component';
+import { BlogNavComponent } from './blog/blog-nav/blog-nav.component';
+import { NewPostComponent } from './blog/new-post/new-post.component';
+import { BlogPostTitleComponent } from './blog/blog-post-title/blog-post-title.component';
+import { BlogPostContentComponent } from './blog/blog-post-content/blog-post-content.component';
 
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
@@ -42,6 +46,10 @@ import { LoadingComponent } from './loading/loading.component';
     ListComponent,
     EditorComponent,
     LoadingComponent,
+    BlogNavComponent,
+    NewPostComponent,
+    BlogPostTitleComponent,
+    BlogPostContentComponent,
   ],
   imports: [
     NativeScriptModule,

@@ -1,12 +1,6 @@
-nav > button {
-  height: 2rem;
-}
-.h6 {
-  color: lightsteelblue!important;
-}
 // Background Color for Blog Content
 .background-wrapper {
-  background: #bec3cd;
+  //background: #bec3cd;
 }
 // Color of Search Icon
 nb-search > button > .nb-search {
@@ -14,6 +8,22 @@ nb-search > button > .nb-search {
 }
 
 #main-wrapper {
-  height: 100%;
+  height: 100%!important;
 }
 
+.blur {
+   -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.post-title {
+  font-size: 2.5rem!important;
+}
+
+:host p p{
+  color: #2ee56b;
+  margin: 0;
+}

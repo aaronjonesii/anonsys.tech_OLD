@@ -13,11 +13,11 @@
             <button class="" (click)="savePost(post.id, title, content)" nbButton hero status="success">Save Post</button>
           </div>
 
-          <anon-editor class="card-title text-center" smallConfig="true" [postDetails]="post.title" #title></anon-editor>
+          <anon-editor class="card-title text-center" [smallConfig]="true" [postDetails]="post.title" #title></anon-editor>
           <hr class="w-75 bg-secondary" />
           <!--<div class="card-text">Testing margins for surrounding containers. </div>-->
 
-          <anon-editor class="card-text" smallConfig="false" [postDetails]="post.content" #content></anon-editor>
+          <anon-editor class="card-text" [smallConfig]="false" [postDetails]="post.content" #content></anon-editor>
         </div>
 
       </nb-card-body>

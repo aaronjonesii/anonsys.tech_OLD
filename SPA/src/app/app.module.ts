@@ -12,7 +12,8 @@ import { EditorComponent } from './blog/editor/editor.component';
 import {
   NbThemeModule, NbLayoutModule, NbWindowModule,
   NbMenuModule, NbButtonModule, NbCardModule,
-  NbCheckboxModule, NbBadgeModule, NbSearchModule, NbAlertModule, NbToastrModule,
+  NbCheckboxModule, NbBadgeModule, NbSearchModule,
+  NbAlertModule, NbToastrModule, NbDialogModule,
 } from '@nebular/theme';
 // Material
 import {MatBottomSheetModule, MatListModule} from '@angular/material';
@@ -34,6 +35,10 @@ import { PostComponent } from './blog/post/post.component';
 import { ItemsComponent } from './todo/items/items.component';
 import { ListComponent } from './todo/list/list.component';
 import { LoadingComponent } from './loading/loading.component';
+import { BlogNavComponent } from './blog/blog-nav/blog-nav.component';
+import { NewPostComponent } from './blog/new-post/new-post.component';
+import { BlogPostTitleComponent } from './blog/blog-post-title/blog-post-title.component';
+import { BlogPostContentComponent } from './blog/blog-post-content/blog-post-content.component';
 
 
 
@@ -56,6 +61,10 @@ import { LoadingComponent } from './loading/loading.component';
     EditorComponent,
     SafePipe,
     LoadingComponent,
+    BlogNavComponent,
+    NewPostComponent,
+    BlogPostTitleComponent,
+    BlogPostContentComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,6 +78,7 @@ import { LoadingComponent } from './loading/loading.component';
     NbMenuModule.forRoot(), NbButtonModule, NbCardModule,
     NbCheckboxModule, NbBadgeModule, NbSearchModule,
     NbAlertModule, NbToastrModule.forRoot(),
+    NbDialogModule.forRoot(), // forChild if lazy loaded
     // Material
     MatBottomSheetModule, MatListModule,
   // Editors
@@ -77,6 +87,7 @@ import { LoadingComponent } from './loading/loading.component';
   providers: [ ],
   entryComponents: [
     BottomSheetComponent,
+    NewPostComponent,
   ],
   bootstrap: [AppComponent]
 })
