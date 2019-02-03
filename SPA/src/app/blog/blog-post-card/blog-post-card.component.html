@@ -1,0 +1,26 @@
+<nb-card
+  class="d-flex post"
+  style="position: relative"
+  *ngFor="let post of posts$ | async as posts; first as isFirst;">
+
+  <nb-badge *ngIf="isFirst" class="" text="latest" status="success" position="top right"></nb-badge>
+<!--  <img [src]="post.image" class="card-img-top" />-->
+
+  <nb-card-header class="card-title d-flex justify-content-between align-items-center">
+    <anon-blog-post-title [title]="post.title"></anon-blog-post-title>
+    <a routerLink="{{post.id}}"> <i data-eva="arrowhead-right-outline" data-eva-animation="zoom" data-eva-fill="lightblue" data-eva-width="38" data-eva-height="38"></i> </a>
+  </nb-card-header>
+
+
+  <nb-card-body style="height: 100px;" class="">
+
+    <anon-blog-post-content [content]="post.content"> </anon-blog-post-content>
+
+  </nb-card-body>
+
+  <nb-card-footer>
+    Post #{{ post.id }} created on {{ post.created_at | date }}
+  </nb-card-footer>
+
+</nb-card>
+

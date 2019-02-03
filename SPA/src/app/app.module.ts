@@ -39,6 +39,7 @@ import { BlogNavComponent } from './blog/blog-nav/blog-nav.component';
 import { NewPostComponent } from './blog/new-post/new-post.component';
 import { BlogPostTitleComponent } from './blog/blog-post-title/blog-post-title.component';
 import { BlogPostContentComponent } from './blog/blog-post-content/blog-post-content.component';
+import { BlogPostCardComponent } from './blog/blog-post-card/blog-post-card.component';
 
 
 
@@ -65,6 +66,7 @@ import { BlogPostContentComponent } from './blog/blog-post-content/blog-post-con
     NewPostComponent,
     BlogPostTitleComponent,
     BlogPostContentComponent,
+    BlogPostCardComponent,
   ],
   imports: [
     BrowserModule,

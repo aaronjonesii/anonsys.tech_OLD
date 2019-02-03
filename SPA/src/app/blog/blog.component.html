@@ -31,26 +31,15 @@
           <div class="row d-flex justify-content-around align-items-center">
             <div class="col"></div>
             <div class="col h2 text-center text-secondary"> Most Recent Posts </div>
-            <div class="col d-flex justify-content-center"> <button class="p-2" status="info" style="cursor: pointer;" routerLink="newpost" nbButton hero> Create New Post </button> </div>
+            <div class="col d-flex justify-content-end"> <button class="p-2" status="info" style="cursor: pointer;" routerLink="newpost" nbButton hero> Create New Post </button> </div>
           </div>
         </div>
-        <hr class="w-50" />
+        <hr class="container" />
 
 
         <div class="container-fluid posts" aria-label="Blog-Posts">
 
-          <nb-card
-            class="container post"
-            *ngFor="let post of posts$ | async as posts; index as i; first as isFirst;"
-            >
-            <nb-card-header class="d-flex justify-content-between align-items-center">
-
-              <anon-blog-post-title [title]="post.title"></anon-blog-post-title>
-              <a routerLink="{{post.id}}"> <i data-eva="arrowhead-right-outline" data-eva-animation="zoom" data-eva-fill="lightblue" data-eva-width="38" data-eva-height="38"></i> </a>
-            </nb-card-header>
-            <nb-card-body> <anon-blog-post-content [content]="post.content"></anon-blog-post-content> </nb-card-body>
-            <nb-card-footer> Post created on {{ post.created_at | date }} </nb-card-footer>
-          </nb-card>
+        <anon-blog-post-card class="d-flex justify-content-around" [posts$]="posts$"> </anon-blog-post-card>
 
         </div>
 

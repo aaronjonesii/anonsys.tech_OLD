@@ -28,7 +28,7 @@ export class BlogComponent implements OnInit {
   ) {
   }
 // https://www.apple.com/newsroom/
-//
+// https://codesnap.io/blog/
 
 
   ngOnInit(): void {
