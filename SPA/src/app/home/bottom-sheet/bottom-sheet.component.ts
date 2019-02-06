@@ -21,7 +21,7 @@ export class BottomSheetComponent implements OnInit {
     { title: 'Apple Music Player', desc: 'Browse Apple Music Top Charts or play music from your account.',
       link: 'music', icon: 'music-outline' },
     { title: 'Blog', desc: 'Posts including knowledge of the broad topic of Technology.',
-      link: 'blog', icon: 'list-outline' },
+      url: 'blog', icon: 'list-outline' },
     { title: 'IP Lookup', desc: 'Enter IP Address to get location information.',
       link: 'ip', icon: 'globe-outline' },
     { title: 'Movie Library', desc: 'Movie collection of 10,000+ with download links.',
